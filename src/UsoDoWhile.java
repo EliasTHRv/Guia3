@@ -20,12 +20,16 @@ public class UsoDoWhile {
             nuM = leerN.nextInt();
             i++;
 
-            if (nuM >= 0) {
+            if ((nuM > 0)) {
 
                 aux = aux + nuM;
-            }
 
-        } while ((nuM<=0) && (i <= 20));
+            } else if (nuM==0) {
+                System.out.println("Se capturo el 0");
+                break;
+
+            }
+        } while ((nuM<0)||(nuM>0) && (i <= 20));
         System.out.println("La suma de los numeros es: " + aux);
 
     }
